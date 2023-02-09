@@ -4,9 +4,13 @@ class Ball extends Sprite {
     bounce(canvasWidth, canvasHeight) {
         if(this.x < 0 || this.x+this.width > canvasWidth) {
             this.dx *= -1;
-        } else if(this.y < 0 || this.y+this.height > canvasHeight) {
+        } else if(this.y < 0 ) {
             this.dy *= -1;
+        } else if(this.y+this.height > canvasHeight) {
+            return false;
         }
+
+        return true;
     }
 
     collides(paddle) {
