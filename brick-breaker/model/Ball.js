@@ -8,6 +8,12 @@ class Ball extends Sprite {
             this.dy *= -1;
         }
     }
+
+    collides(paddle) {
+        if(this.intersects(paddle)) {
+            this.dy *= -1;
+        }
+    }
 }
 
 export default Ball;

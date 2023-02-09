@@ -28,6 +28,7 @@ function draw() {
   ball.draw(ctx);
   ball.move();
   ball.bounce(canvas.width, canvas.height);
+  ball.collides(paddle);
 
   paddle.draw(ctx);
   paddle.move(canvas.width);
